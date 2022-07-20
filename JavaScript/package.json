@@ -1,0 +1,24 @@
+{
+  "name": "Activity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swatithakur99/Activity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swatithakur99/Activity/issues"
+  },
+  "homepage": "https://github.com/swatithakur99/Activity#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.11",
+    "request": "^2.88.2"
+  }
+}
