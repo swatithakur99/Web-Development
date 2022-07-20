@@ -1,0 +1,88 @@
+
+.toolbar{
+    border:2px solid black;
+    width:80vw;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.fas{
+    font-size: 2rem;
+}
+.tool-img{
+    /* border: 1px solid green; */
+height: 40px;
+}
+.pencil{
+    width: 40px;
+    height: 40px;
+}
+.eraser{
+    width: 40px;
+    height: 40px;
+}
+.download{
+    width: 40px;
+    height: 40px;
+}
+.photo{
+    width: 40px;
+    height: 40px;
+}
+
+.color-container{
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid green;
+    width: 150px;
+    height: 40px
+}
+.color{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px
+}
+.red{
+    background-color: lightpink;
+    /* border-radius: 50%; */
+    
+}
+.blue{
+    background-color: lightblue;
+   
+}
+.green{
+    background-color: lightgreen;
+   
+}
+/* options */
+.size-box{
+    border: 1px solid gray;
+    width: 100px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.size{
+    border-radius: 50px;
+    background-color: gray;
+}
+.size1{
+    width: 10px;
+    height: 10px;
+}
+.size2{
+    width: 14px;
+    height: 14px;
+}
+.size3{
+    width: 18px;
+    height: 18px;
+}
+.size4{
+    width: 22px;
+    height: 22px;
+}

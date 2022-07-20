@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="toolbar">
+        <div class="tool" id="pencil">
+            <img src="Black_Pencil.jpg" alt="" class="tool-img">
+            <div class="size-box">
+                <div class="size1 size"></div>
+                <div class="size2 size"></div>
+                <div class="size3 size"></div>
+                <div class="size4 size"></div>
+            </div>
+        </div>
+        <div class="tool" id ="eraser">
+            <img src="Eraser.jpg" alt="" class ="tool-img">
+            <div class="size-box">
+                <div class="size1 size"></div>
+                <div class="size2 size"></div>
+                <div class="size3 size"></div>
+                <div class="size4 size"></div>
+            </div>
+        </div>
+        <div class="tool" id ="download">
+            <i class="fas fa-square"  class = "tool-img"></i>
+            <div class="size-box">
+                <div class="size1 size"></div>
+                <div class="size2 size"></div>
+                <div class="size3 size"></div>
+                <div class="size4 size"></div>
+            </div>
+        </div>
+        <div class="tool" id="photo">
+            <i class="fas fa-grip-lines-vertical" class="tool-img"></i>
+            <div class="size-box">
+                <div class="size1 size"></div>
+                <div class="size2 size"></div>
+                <div class="size3 size"></div>
+                <div class="size4 size"></div>
+            </div>
+        </div>
+        <div class="color-container">
+            <div class="color red"></div>
+            <div class="color blue"></div>
+            <div class="color green"></div>
+        </div>
+    </div>
+    <canvas></canvas>
+    <script>
+        let pencil = document.querySelector("#pencil");
+        let eraser = document.querySelector("#eraser");
+        let download = document.querySelector("#download");
+        let photo = document.querySelector("#photo");
+        let options=document.querySelectorAll(".size-box");
+        let CTool = "pencil";
+        pencil.addEventListener("click",function(e){
+            if(CTool=="pencil"){
+             options[0].style.display="flex";
+            }else{
+              CTool="pencil";
+            for(let i=0;i<options.length;i++){
+              options[i].style.display="none";
+             }
+            }
+        })
+        eraser.addEventListener("click",function(e){
+            if(CTool=="eraser"){
+             options[1].style.display="flex";
+            }else{
+              CTool="eraser";
+            for(let i=0;i<options.length;i++){
+              options[i].style.display="none";
+             }
+            }
+        })
+        download.addEventListener("click",function(e){
+            if(CTool=="download"){
+             options[2].style.display="flex";
+            }else{
+              CTool="download";
+            for(let i=0;i<options.length;i++){
+              options[i].style.display="none";
+             }
+            }
+        })
+        photo.addEventListener("click",function(e){
+            if(CTool=="photo"){
+             options[3].style.display="flex";
+            }else{
+              CTool="photo";
+            for(let i=0;i<options.length;i++){
+              options[i].style.display="none";
+             }
+            }
+        })
+    </script>
+    <!-- pencil -->
+    <script>
+        let canvasBoard = document.querySelector("canvas");
+        let body = document.querySelector("body");
+        let cTool = "rectTool";
+        let boardTop = canvasBoard.getBoundingClientRect().top;
+        let boardLeft = canvasBoard.getBoundingClientRect().left;
+        let ix,iy,fx,fy;
+        let drawingMode = false;
+        let tool = canvasBoard.getContext("2d");
+        canvasBoard.height = window.innerHeight;
+        canvasBoard.width = window.innerWidth;
+    
+       body.addEventListener("mousedown",function(e){
+           drawingMode = true;
+           tool.beginPath();
+           ix = e.clientX-boardLeft;
+           iy = e.clientY-boardTop;
+           tool.moveTo(ix,iy);
+       })
+       
+       body.addEventListener("mouseup",function(e){
+           drawingMode = false;
+       })
+       
+        body.addEventListener("mousemove", function (e) {
+            if(drawingMode==false){
+                return;
+            }
+            fx = e.clientX- boardLeft;
+            fy = e.clientY- boardTop;
+            tool.lineTo(fx,fy);
+            tool.stroke();
+            ix = fx;
+            iy=fy;
+            // console.log(xpos, ypos);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+     <title>Excel clone</title>
+</head>
+<body>
+    <div class="menu_bar">
+        <div class="new_open_save_container">
+            <div class="icon">
+                <i class="far fa-file"></i>
+            </div>
+            <div class="icon_container">
+                <i class="far fa-folder-open"></i>
+            </div>
+            <div class="icon_container">
+                <i class="far fa-save"></i>
+            </div>
+        </div>
+        <select class="font_family-input">
+        <option value="Arial">Arial</option>
+        <option value="cursive">cursive</option>
+        <option value="veranda">veranda</option>
+        <option value="fantasy">fantasy</option>
+        </select>
+        <select  class="font_size_input">
+            <option value="14">14</option>
+            <option value="18">18</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+        </select>
+
+    </div>
+    <div class="formula_bar">
+        <input type="text" class="address_input">
+        <div>:</div>
+        <input type="text" class="formula_input">
+            </div>
+    <div class="grid_container">
+        <div class="top_left_cell"></div>
+        <div class="top_row"></div>
+        <div class="left_col"></div>
+        <div class="grid"></div>
+    </div>
+    <div class="sheet_container">sheet</div>
+    <script src="script.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+/* universal selector */
+*{
+    box-sizing: border-box;
+}
+body{
+ /* border: 2px solid red; */
+ margin:0px;
+}
+.header-container{
+    /* border: 1px solid black; */
+    height: 5.25rem;
+    background-color: #333;
+    /* color: white; */
+    /* background-color: rgb(158, 152, 152); */
+    display: flex;
+    padding-left: 7rem;
+    /* justify-content: flex-start; */
+    align-items: center;
+    /* justify-content: space-evenly; */
+    
+}
+.header-container>*{
+    background-color: rgb(68, 67, 67);
+    border-radius: 0.2rem;
+    height: 60%;
+
+}
+.color-group-container{
+    width: 22%;
+    margin-right: 7rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.color {
+    height: 45%;
+    width:9%;
+    border-radius: 4px;
+}
+.pink{
+    background-color: lightpink;
+}
+.blue{
+    background-color: lightblue;
+}
+.green{
+    background-color: lightgreen;
+}
+.black{
+    background-color: black;
+}
+.add-cross-container{
+    width: 10%;
+    display: flex;
+    margin-right:0.5rem;
+    
+}
+.lock-unlock_container{
+    width: 7%;
+    display: flex;
+    /* border: 2px solid red; */
+    margin-right: 0.5rem;
+}
+.plus-container,.cross-container,.lock,.unlock{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-plus,.fa-times,.fa-lock,.fa-lock-open-alt{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.active{
+    background-color: rgb(37, 37, 37);
+}
+/* **************Main**************** */
+.main-container{
+    /* border: 1px solid green; */
+    height:100vh;
+    background-color:  #f2f2f2;
+    padding: 4rem ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+/* Styling input */
+.task-box{
+    /* border:1px solid black; */
+    background-color: white;
+    height: 8rem;
+    width:14rem;
+ }
+.task-input{
+    color: white;
+    margin-left: 3px;
+}
+
+ .task-header{
+     height:0.5rem;
+     /* background-color: black; */
+ }
+ .task-main{
+     padding:0.5rem;
+    height: 6.5rem;
+}
+ .task-id{
+    color:rgb(150, 144, 144);
+    /* left,right ,top bottom  */
+    margin:0.2rem;
+    margin-left:0px;
+ }
